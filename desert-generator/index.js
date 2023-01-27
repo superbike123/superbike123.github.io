@@ -38,7 +38,9 @@ var STANDS = [
 var STANDS_ALT = [
     "The World",
     "Star Platinum - Prime",
+    "Hierophant Green",
     "Sticky Fingers",
+    "Magicians Red",
     "Gold Experience",
     "Whitesnake",
     "King Crimson",
@@ -63,7 +65,6 @@ var SPECS_ALT = [
     "Hamon",
     "Vampire",
     "Joseph's Hamon",
-    "Witch",
     "Spin"
 ];
 // Function to get a Stand

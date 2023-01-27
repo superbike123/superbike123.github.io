@@ -40,7 +40,9 @@ const STANDS: string[] = [
 const STANDS_ALT: string[] = [
     "The World",
     "Star Platinum - Prime",
+    "Hierophant Green",
     "Sticky Fingers",
+    "Magicians Red",
     "Gold Experience",
     "Whitesnake",
     "King Crimson",
@@ -67,7 +69,6 @@ const SPECS_ALT: string[] = [
     "Hamon",
     "Vampire",
     "Joseph's Hamon",
-    "Witch",
     "Spin"
 ];
 
