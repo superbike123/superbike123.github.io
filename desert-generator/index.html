@@ -4,23 +4,27 @@
 <!-- desert Stand and Spec Generator -->
 
 <html>
-    <title>desert Stand and Spec Generator</title>
+    <title>desert & sbr test Randomiser</title>
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
 
     <body>
-        <h1>desert Stand and Spec Generator</h1>
+        <h1>desert & sbr test Randomiser</h1>
         <i><a href="https://github.com/superbike123/superbike123.github.io/tree/main/desert-generator">Source code</a></i>
         <i><p>Use this tool to randomly select a Stand or a Spec instead of finding an arrow.</p></i>
-        <i><p>Using the alternative set of Stands and Specs disables more overpowered Stands and prevents selecting the 'Basic' Spec.</p></i>
+        <i><p>Use the 'Select All' button to generate all of them. Press the one for the game that you are playing.</p></i>
+        <i><p>Using the alternative set disables more overpowered Stands, disables the 'Difficult' Horse and prevents selecting the 'Basic' Spec.</p></i>
         <strong><p>Options:</p></strong>
         <button onclick="getStand()">Select a Stand</button>
         <button onclick="getSpec()">Select a Spec</button>
-        <button onclick="getBoth()">Select Both</button>
+        <button onclick="getHorse()">Select a Horse</button>
+        <button onclick="getBoth(0)">Select All (desert)</button>
+        <button onclick="getBoth(1)">Select All (sbr test)</button>
         <input type="checkbox" id="altSetCheckbox" name="checkbox"> <label for="checkbox">Use alternative set</label>
         <div id="fields">
             <h3 id="standField"></h3>
             <h3 id="specField"></h3>
+            <h3 id="horseField"></h3>
         </div>
     </body>
 </html>

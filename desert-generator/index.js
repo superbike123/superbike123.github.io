@@ -67,6 +67,23 @@ var SPECS_ALT = [
     "Joseph's Hamon",
     "Spin"
 ];
+var HORSES = [
+    "Basic",
+    "Blitz",
+    "Vital",
+    "Bullet",
+    "Precise",
+    "Difficult",
+    "Simple"
+];
+var HORSES_ALT = [
+    "Basic",
+    "Blitz",
+    "Vital",
+    "Bullet",
+    "Precise",
+    "Simple"
+];
 // Function to get a Stand
 var getStand = function () {
     var checkbox = document.getElementById("altSetCheckbox");
@@ -99,5 +116,30 @@ var getSpec = function () {
         document.getElementById("specField").textContent = "Spec: " + generatedSpec;
     }
 };
-// Function to get both a Stand and a Spec
-var getBoth = function () { getStand(); getSpec(); };
+var getHorse = function () {
+    var checkbox = document.getElementById("altSetCheckbox");
+    if (checkbox.checked) {
+        var horseNo = Math.floor(Math.random() * HORSES_ALT.length);
+        var generatedHorse = HORSES_ALT[horseNo];
+        // Display the Spec
+        document.getElementById("horseField").textContent = "Horse: " + generatedHorse;
+    }
+    else {
+        var horseNo = Math.floor(Math.random() * HORSES.length);
+        var generatedHorse = HORSES[horseNo];
+        // Display the Spec
+        document.getElementById("horseField").textContent = "Horse: " + generatedHorse;
+    }
+};
+// Function to get a Stand, Spec and a Horse
+var getBoth = function (game) {
+    if (game === 0) {
+        getStand();
+        getSpec();
+    }
+    else if (game === 1) {
+        getStand();
+        getSpec();
+        getHorse();
+    }
+};

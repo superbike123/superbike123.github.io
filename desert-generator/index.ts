@@ -72,6 +72,25 @@ const SPECS_ALT: string[] = [
     "Spin"
 ];
 
+const HORSES: string[] = [
+    "Basic",
+    "Blitz",
+    "Vital",
+    "Bullet",
+    "Precise",
+    "Difficult",
+    "Simple"
+]
+
+const HORSES_ALT: string[] = [
+    "Basic",
+    "Blitz",
+    "Vital",
+    "Bullet",
+    "Precise",
+    "Simple"
+]
+
 // Function to get a Stand
 let getStand = () => {
     let checkbox: HTMLInputElement = <HTMLInputElement> document.getElementById("altSetCheckbox")
@@ -108,5 +127,31 @@ let getSpec = () => {
     }
 }
 
-// Function to get both a Stand and a Spec
-let getBoth = () => { getStand(); getSpec(); }
+let getHorse = () => {
+    let checkbox: HTMLInputElement = <HTMLInputElement>document.getElementById("altSetCheckbox")
+    if (checkbox.checked) {
+        let horseNo: number = Math.floor(Math.random() * HORSES_ALT.length);
+        let generatedHorse: string = HORSES_ALT[horseNo];
+
+        // Display the Spec
+        document.getElementById("horseField")!.textContent = "Horse: " + generatedHorse;
+    } else {
+        let horseNo: number = Math.floor(Math.random() * HORSES.length);
+        let generatedHorse: string = HORSES[horseNo];
+
+        // Display the Spec
+        document.getElementById("horseField")!.textContent = "Horse: " + generatedHorse;
+    }
+}
+
+// Function to get a Stand, Spec and a Horse
+let getBoth = (game: number) => {
+    if (game === 0) {
+        getStand();
+        getSpec();
+    } else if (game === 1) {
+        getStand();
+        getSpec();
+        getHorse();
+    }
+}
