@@ -36,6 +36,22 @@ const STANDS: string[] = [
     "Crazy Diamond"
 ];
 
+// Alternative array of Stands
+const STANDS_ALT: string[] = [
+    "The World",
+    "Star Platinum - Prime",
+    "Sticky Fingers",
+    "Gold Experience",
+    "Whitesnake",
+    "King Crimson",
+    "Silver Chariot",
+    "The World Over Heaven",
+    "The Hand",
+    "Star Platinum",
+    "Cream",
+    "Crazy Diamond"
+];
+
 // Array of Specs
 const SPECS: string[] = [
     "Basic",
@@ -46,21 +62,50 @@ const SPECS: string[] = [
     "Spin"
 ];
 
+// Alternative array of Specs
+const SPECS_ALT: string[] = [
+    "Hamon",
+    "Vampire",
+    "Joseph's Hamon",
+    "Witch",
+    "Spin"
+];
 
 // Function to get a Stand
 let getStand = () => {
-    let standNo: number = Math.floor(Math.random() * STANDS.length);
-    let generatedStand: string = STANDS[standNo];
+    let checkbox: HTMLInputElement = <HTMLInputElement> document.getElementById("altSetCheckbox")
+    if (checkbox.checked) {
+        let standNo: number = Math.floor(Math.random() * STANDS_ALT.length);
+        let generatedStand: string = STANDS_ALT[standNo];
 
-    // Display the Stand
-    document.getElementById("standField")!.textContent = "Stand: " + generatedStand;
+        // Display the Stand
+        document.getElementById("standField")!.textContent = "Stand: " + generatedStand;
+    } else {
+        let standNo: number = Math.floor(Math.random() * STANDS.length);
+        let generatedStand: string = STANDS[standNo];
+        
+        // Display the Stand
+        document.getElementById("standField")!.textContent = "Stand: " + generatedStand;
+    }
 }
 
 // Function to get a Spec
 let getSpec = () => {
-    let specNo: number = Math.floor(Math.random() * SPECS.length);
-    let generatedSpec: string = SPECS[specNo];
+    let checkbox: HTMLInputElement = <HTMLInputElement> document.getElementById("altSetCheckbox")
+    if (checkbox.checked) {
+        let specNo: number = Math.floor(Math.random() * SPECS_ALT.length);
+        let generatedSpec: string = SPECS_ALT[specNo];
 
-    // Display the Spec
-    document.getElementById("specField")!.textContent = "Spec: " + generatedSpec;
+        // Display the Spec
+        document.getElementById("specField")!.textContent = "Spec: " + generatedSpec;
+    } else {
+        let specNo: number = Math.floor(Math.random() * SPECS.length);
+        let generatedSpec: string = SPECS[specNo];
+
+        // Display the Spec
+        document.getElementById("specField")!.textContent = "Spec: " + generatedSpec;
+    }
 }
+
+// Function to get both a Stand and a Spec
+let getBoth = () => { getStand(); getSpec(); }

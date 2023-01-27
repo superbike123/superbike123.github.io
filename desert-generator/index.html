@@ -1,15 +1,25 @@
 <!DOCTYPE html>
+
+<!-- desert Stand and Spec Generator -->
+
 <html>
+    <title>desert Stand and Spec Generator</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+
     <body>
-        <title>desert Stand and Spec Generator</title>
-        <link rel="stylesheet" href="index.css">
-        <script src="index.js"></script>
         <h1>desert Stand and Spec Generator</h1>
-        <i><a href="https://github.com/superbike123/superbike123.github.io/tree/main/desert-generator">Source Code</a></i>
+        <i><a href="https://github.com/superbike123/superbike123.github.io/tree/main/desert-generator">Source code</a></i>
         <i><p>Use this tool to randomly select a Stand or a Spec instead of finding an arrow.</p></i>
+        <i><p>Using the alternative set of Stands and Specs disables more overpowered Stands and prevents selecting the 'Basic' Spec.</p></i>
+        <strong><p>Options:</p></strong>
         <button onclick="getStand()">Randomly select a Stand</button>
-        <button onclick="getSpec()"">Randomly select a Spec</button>
-        <h3 id="standField"></h3>
-        <h3 id="specField"></h3>
+        <button onclick="getSpec()">Randomly select a Spec</button>
+        <button onclick="getBoth()">Select Both</button>
+        <input type="checkbox" id="altSetCheckbox" name="checkbox"> <label for="checkbox">Use alternative sets</label>
+        <div id="fields">
+            <h3 id="standField"></h3>
+            <h3 id="specField"></h3>
+        </div>
     </body>
 </html>

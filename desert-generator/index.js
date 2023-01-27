@@ -34,6 +34,21 @@ var STANDS = [
     "Cream",
     "Crazy Diamond"
 ];
+// Alternative array of Stands
+var STANDS_ALT = [
+    "The World",
+    "Star Platinum - Prime",
+    "Sticky Fingers",
+    "Gold Experience",
+    "Whitesnake",
+    "King Crimson",
+    "Silver Chariot",
+    "The World Over Heaven",
+    "The Hand",
+    "Star Platinum",
+    "Cream",
+    "Crazy Diamond"
+];
 // Array of Specs
 var SPECS = [
     "Basic",
@@ -43,17 +58,45 @@ var SPECS = [
     "Witch",
     "Spin"
 ];
+// Alternative array of Specs
+var SPECS_ALT = [
+    "Hamon",
+    "Vampire",
+    "Joseph's Hamon",
+    "Witch",
+    "Spin"
+];
 // Function to get a Stand
 var getStand = function () {
-    var standNo = Math.floor(Math.random() * STANDS.length);
-    var generatedStand = STANDS[standNo];
-    // Display the Stand
-    document.getElementById("standField").textContent = "Stand: " + generatedStand;
+    var checkbox = document.getElementById("altSetCheckbox");
+    if (checkbox.checked) {
+        var standNo = Math.floor(Math.random() * STANDS_ALT.length);
+        var generatedStand = STANDS_ALT[standNo];
+        // Display the Stand
+        document.getElementById("standField").textContent = "Stand: " + generatedStand;
+    }
+    else {
+        var standNo = Math.floor(Math.random() * STANDS.length);
+        var generatedStand = STANDS[standNo];
+        // Display the Stand
+        document.getElementById("standField").textContent = "Stand: " + generatedStand;
+    }
 };
 // Function to get a Spec
 var getSpec = function () {
-    var specNo = Math.floor(Math.random() * SPECS.length);
-    var generatedSpec = SPECS[specNo];
-    // Display the Spec
-    document.getElementById("specField").textContent = "Spec: " + generatedSpec;
+    var checkbox = document.getElementById("altSetCheckbox");
+    if (checkbox.checked) {
+        var specNo = Math.floor(Math.random() * SPECS_ALT.length);
+        var generatedSpec = SPECS_ALT[specNo];
+        // Display the Spec
+        document.getElementById("specField").textContent = "Spec: " + generatedSpec;
+    }
+    else {
+        var specNo = Math.floor(Math.random() * SPECS.length);
+        var generatedSpec = SPECS[specNo];
+        // Display the Spec
+        document.getElementById("specField").textContent = "Spec: " + generatedSpec;
+    }
 };
+// Function to get both a Stand and a Spec
+var getBoth = function () { getStand(); getSpec(); };
