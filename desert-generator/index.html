@@ -5,21 +5,25 @@
 
 <html>
     <title>desert & sbr test Randomiser</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="darkmode.css">
     <script src="index.js"></script>
 
     <body>
-        <h1>desert & sbr test Randomiser</h1>
-        <i><a href="https://github.com/superbike123/superbike123.github.io/tree/main/desert-generator">Source code</a></i>
-        <i><p>Use this tool to randomly select a Stand or a Spec instead of finding an arrow.</p></i>
-        <i><p>Use the 'Select All' button to generate all of them. Press the one for the game that you are playing.</p></i>
-        <i><p>Using the alternative set disables more overpowered Stands, disables the 'Difficult' Horse and prevents selecting the 'Basic' Spec.</p></i>
+        <strong><h1>desert & sbr test Randomiser</h1></strong>
+        <strong><i><a href="https://github.com/superbike123/superbike123.github.io/tree/main/desert-generator">Source code</a></i></strong>
+        <i><p><strong>desert & sbr test Randomiser</strong> is a tool used to create randomised selections of Stands, Specs and Horses for <a href="https://www.roblox.com/games/8823151085/desert">desert</a> and <a href="https://www.roblox.com/games/9245024720/sbr-test">sbr test</a>.</p></i>
+        <i><p>Use the <strong>'Select All'</strong> button to generate all of them. Press the one for the game that you are playing.</p></i>
+        <i><p>Using the <strong>alternative set</strong> disables some Stands, Specs and Horses. For more information, <a href="">see the list of changes</a>.</p></i>
+        <i><p>If something has a tick (✅) next to it, then it is complete. If something has a tree (🌳) then it has a skilltree.</p></i>
         <strong><p>Options:</p></strong>
-        <button onclick="getStand()">Select a Stand</button>
-        <button onclick="getSpec()">Select a Spec</button>
-        <button onclick="getHorse()">Select a Horse</button>
+        <button onclick="getStand(0)">Select a Stand</button>
+        <button onclick="getSpec(0)">Select a Spec</button>
+        <button onclick="getHorse(0)">Select a Horse</button>
         <button onclick="getBoth(0)">Select All (desert)</button>
         <button onclick="getBoth(1)">Select All (sbr test)</button>
+        <button onclick="clearText()">Clear</button>
         <input type="checkbox" id="altSetCheckbox" name="checkbox"> <label for="checkbox">Use alternative set</label>
         <div id="fields">
             <h3 id="standField"></h3>

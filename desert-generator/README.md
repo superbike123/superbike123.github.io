@@ -1,6 +1,6 @@
-# desert Stand and Spec generator
+# desert & sbr test Randomiser
 
-This is a Stand and Spec generator for [desert](https://www.roblox.com/games/8823151085/desert)
+This is a randomiser for [desert](https://www.roblox.com/games/8823151085/desert)
 
 You can use it [here](https://superbike123.github.io/desert-generator/index.html).
 
