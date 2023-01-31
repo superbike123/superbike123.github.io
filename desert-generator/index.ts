@@ -1,4 +1,6 @@
 /*
+@source: https://raw.githubusercontent.com/superbike123/superbike123.github.io/main/desert-generator/index.ts
+
 @licstart  The following is the entire license notice for the TypeScript/JavaScript code in this website.
 
 desert Stand and Spec generator
@@ -19,8 +21,12 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
 @licend  The above is the entire license notice for the TypeScript/JavaScript code in this website.
-*/
 
+
+
+
+
+*/
 // Arrays:
 
 /* All entries in the arrays have the identifications from the game,
