@@ -1,5 +1,4 @@
 /*
-@source: https://raw.githubusercontent.com/superbike123/superbike123.github.io/main/desert-generator/index.ts
 
 @licstart  The following is the entire license notice for the TypeScript/JavaScript code in this website.
 
@@ -24,6 +23,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
 
+@source: https://raw.githubusercontent.com/superbike123/superbike123.github.io/main/desert-generator/index.ts
 
 
 */
