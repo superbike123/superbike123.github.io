@@ -1,0 +1,3 @@
+# .gitignore for superbike123.github.io, just ignore all node_modules directories created by npm.
+node_modules/
+desert-randomiser/node_modules/

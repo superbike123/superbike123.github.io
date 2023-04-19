@@ -1,0 +1,25 @@
+{
+  "name": "desert-randomiser",
+  "version": "2.0.0",
+  "description": "A tool to generate random selections of Stands, Specs and Horses for the two games desert and sbr test.",
+  "main": "pages/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/superbike123/superbike123.github.io.git#main"
+  },
+  "author": "superbike123",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/superbike123/superbike123.github.io/issues"
+  },
+  "homepage": "https://github.com/superbike123/superbike123.github.io/tree/main#readme",
+  "devDependencies": {
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "ts-loader": "^9.4.2"
+  }
+}

@@ -1,19 +1,9 @@
 {
-  "name": "superbike123.github.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "dependencies": {
+    "@ffmpeg/core": "^0.11.0",
+    "@ffmpeg/ffmpeg": "^0.11.6"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/superbike123/superbike123.github.io.git"
-  },
-  "author": "superbike123",
-  "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/superbike123/superbike123.github.io/issues"
-  },
-  "homepage": "https://github.com/superbike123/superbike123.github.io#readme"
+  "devDependencies": {
+    "webpack-cli": "^5.0.1"
+  }
 }

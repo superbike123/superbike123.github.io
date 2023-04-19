@@ -6,8 +6,8 @@ The alternative set is a different set of Stands, Specs and Horses which removes
 - It's too unfinished
 
 ## List of Stands in the alternative set
-- The World 
-- Star Platinum - Prime 
+- The World
+- Star Platinum - Prime
 - Hierophant Green
 - Sticky Fingers
 - Magicians Red

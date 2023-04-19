@@ -1,0 +1,38 @@
+{
+	"stands": [
+	    "The World",
+	    "Star Platinum - Prime",
+	    "Made In Heaven",
+	    "Hierophant Green",
+	    "Sticky Fingers",
+	    "Magicians Red",
+	    "Gold Experience",
+	    "Whitesnake",
+	    "C-Moon",
+	    "King Crimson",
+	    "Silver Chariot",
+	    "The World Over Heaven",
+	    "The Hand",
+	    "Star Platinum",
+	    "Cream",
+	    "Crazy Diamond",
+		"Killer Queen"
+	],
+	"specs": [
+	    "Basic",
+	    "Hamon",
+	    "Vampire",
+	    "Joseph's Hamon",
+	    "Witch",
+	    "Spin"
+	],
+	"horses": [
+	    "Basic",
+	    "Blitz",
+	    "Vital",
+	    "Bullet",
+	    "Precise",
+	    "Difficult",
+	    "Simple"
+	]
+}
