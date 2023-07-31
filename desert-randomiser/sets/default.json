@@ -1,12 +1,17 @@
 {
+	"name": "Regular",
+	"source": "built-in",
+	
 	"stands": [
 	    "The World",
 	    "Star Platinum - Prime",
+	    "Made In Heaven",
 	    "Hierophant Green",
 	    "Sticky Fingers",
 	    "Magicians Red",
 	    "Gold Experience",
 	    "Whitesnake",
+	    "C-Moon",
 	    "King Crimson",
 	    "Silver Chariot",
 	    "The World Over Heaven",
@@ -17,9 +22,11 @@
 		"Killer Queen"
 	],
 	"specs": [
+	    "Basic",
 	    "Hamon",
 	    "Vampire",
 	    "Joseph's Hamon",
+	    "Witch",
 	    "Spin"
 	],
 	"horses": [
@@ -28,6 +35,7 @@
 	    "Vital",
 	    "Bullet",
 	    "Precise",
+	    "Difficult",
 	    "Simple"
 	]
 }

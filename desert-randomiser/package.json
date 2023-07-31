@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/superbike123/superbike123.github.io/tree/main#readme",
   "devDependencies": {
-    "webpack-cli": "^5.0.1"
+    "webpack-cli": "^5.0.2"
   },
   "dependencies": {
-    "ts-loader": "^9.4.2"
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.80.0"
   }
 }

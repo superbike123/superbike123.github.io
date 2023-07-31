@@ -9,7 +9,7 @@ var desertRandomiser;
 
 /**
 *
-* @source: https://raw.githubusercontent.com/superbike123/superbike123.github.io/main/desert-generator/index.ts
+* @source: https://raw.githubusercontent.com/superbike123/superbike123.github.io/main/desert-randomiser/src/index.ts
 *
 * @licstart  The following is the entire license notice for the JavaScript code in this page.
 *
@@ -43,18 +43,22 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.moreLess = exports.getBoth = exports.clearText = exports.switchGame = exports.getHorse = exports.getSpec = exports.getStand = void 0;
 ////////////////////////////////////////////////////////////
 //              desert & sbr test Randomiser              //
-//                      Version 2.0                       //
 ////////////////////////////////////////////////////////////
+var version = 2.1;
 // Sets are now imported as JSON files. See the sets/ directory.
-var regular = __webpack_require__(54);
-var alternative = __webpack_require__(358);
-var james = __webpack_require__(120); // lol
+var regular = __webpack_require__(384);
+var alternative = __webpack_require__(466);
+// const james = require('../sets/james.json'); // lol
+// File for getting the correct emojis to place next to the selection
 var status = __webpack_require__(355);
 // Define the sets that come by default, this is used for the dropdown HTML object.
-var defaultSets = "<option>Regular</option><option>Alternative</option>";
+var defaultSets = "<option>" + regular["name"] + "</option><option>" + alternative["name"] + "</option>"; // james["name"]+ "</option>";
 var dropdown = document.getElementById("setsDropdown");
 // Add the default sets to the dropdown.
 dropdown.innerHTML = defaultSets;
+// Find the disallow duplicates checkbox and set it to true
+/* const dupeCheckbox: any = document.getElementById("dupeCheckbox")!;
+dupeCheckbox.checked = true; */
 // Store symbols for the identifications.
 var symbols = ["✅", "🌳"];
 console.log("---- Source code for this website can be found on the git repository here: https://github.com/superbike123/superbike123.github.io/tree/main/desert-randomiser");
@@ -65,9 +69,7 @@ if (gameButton !== null) {
     if (document.cookie === "") {
         console.log("-- No cookie found... trying to create one");
         document.cookie = "selectedGame=desert";
-        console.log("-- Created a cookie with value: " + document.cookie);
         document.getElementById("gameButton").innerHTML = "<strong>" + "Current Game: desert" + "</strong>";
-        console.log("-- Set the text on gameButton as: '" + document.getElementById("gameButton").textContent + "'");
         document.getElementById("horse").style.display = "none";
     }
     else {
@@ -86,6 +88,9 @@ var getStand = function (type) {
     if (type === 0) {
         (0, exports.clearText)();
     }
+    /* if (dupeCheckbox.checked) {
+
+    } */
     if (dropdown.value === "Alternative") {
         var standNo = Math.floor(Math.random() * alternative.stands.length);
         var generatedStand = alternative.stands[standNo];
@@ -101,7 +106,6 @@ var getStand = function (type) {
         else {
             // Display the Stand
             document.getElementById("standField").textContent = "Stand: " + generatedStand;
-            return generatedStand;
         }
     }
     else { // Regular set
@@ -119,7 +123,6 @@ var getStand = function (type) {
         else {
             // Display the Stand
             document.getElementById("standField").textContent = "Stand: " + generatedStand;
-            return generatedStand;
         }
     }
 };
@@ -144,7 +147,6 @@ var getSpec = function (type) {
         else {
             // Display the Stand
             document.getElementById("specField").textContent = "Spec: " + generatedSpec;
-            return generatedSpec;
         }
     }
     else {
@@ -162,7 +164,6 @@ var getSpec = function (type) {
         else {
             // Display the Stand
             document.getElementById("specField").textContent = "Spec: " + generatedSpec;
-            return generatedSpec;
         }
     }
 };
@@ -176,14 +177,12 @@ var getHorse = function (type) {
         var generatedHorse = alternative.horses[horseNo];
         // Display the Spec
         document.getElementById("horseField").textContent = "Horse: " + generatedHorse;
-        return generatedHorse;
     }
     else {
         var horseNo = Math.floor(Math.random() * regular.horses.length);
         var generatedHorse = regular.horses[horseNo];
         // Display the Spec
         document.getElementById("horseField").textContent = "Horse: " + generatedHorse;
-        return generatedHorse;
     }
 };
 exports.getHorse = getHorse;
@@ -230,9 +229,9 @@ var moreLess = function () {
     var line0 = '<strong>desert & sbr test Randomiser</strong> is a tool used to create randomised selections of Stands, Specs and Horses for <a href="https://www.roblox.com/games/8823151085/desert">desert</a> and <a href="https://www.roblox.com/games/9245024720/sbr-test">sbr test</a>...';
     var line0_alt = '<strong>desert & sbr test Randomiser</strong> is a tool used to create randomised selections of Stands, Specs and Horses for <a href="https://www.roblox.com/games/8823151085/desert">desert</a> and <a href="https://www.roblox.com/games/9245024720/sbr-test">sbr test</a>';
     var line1 = "Use the <strong>'Select All'</strong> button to generate all of them.";
-    var line2 = 'Using the <strong>alternative set</strong> disables some stands, specs and horses. For more information, <a href="https://github.com/superbike123/superbike123.github.io/blob/main/desert-randomiser/AltSet.md">see the list of changes';
+    var line2 = 'Using the <strong>alternative set</strong> disables some stands, specs and horses. For more information, <a href="https://github.com/superbike123/superbike123.github.io/blob/main/desert-randomiser/docs/AltSet.md">see the list of changes';
     var line3 = "If something has a tick (✅) next to it, then it is complete. If something has a tree (🌳) then it has a skilltree.";
-    var line4 = "desert & sbr test Randomiser: Version 2.0";
+    var line4 = "superbike123.github.io: Version " + version;
     var moreLessText = document.getElementById("moreLessText");
     var line0Html = document.getElementById("text_0");
     var line1Html = document.getElementById("text_1");
@@ -267,24 +266,17 @@ exports.moreLess = moreLess;
 
 /***/ }),
 
-/***/ 358:
+/***/ 466:
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"stands":["The World","Star Platinum - Prime","Hierophant Green","Sticky Fingers","Magicians Red","Gold Experience","Whitesnake","King Crimson","Silver Chariot","The World Over Heaven","The Hand","Star Platinum","Cream","Crazy Diamond","Killer Queen"],"specs":["Hamon","Vampire","Joseph\'s Hamon","Spin"],"horses":["Basic","Blitz","Vital","Bullet","Precise","Simple"]}');
+module.exports = JSON.parse('{"name":"Alternative","source":"built-in","stands":["The World","Star Platinum - Prime","Hierophant Green","Sticky Fingers","Magicians Red","Gold Experience","Whitesnake","King Crimson","Silver Chariot","The World Over Heaven","The Hand","Star Platinum","Cream","Crazy Diamond","Killer Queen"],"specs":["Hamon","Vampire","Joseph\'s Hamon","Spin"],"horses":["Basic","Blitz","Vital","Bullet","Precise","Simple"]}');
 
 /***/ }),
 
-/***/ 54:
+/***/ 384:
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"stands":["The World","Star Platinum - Prime","Made In Heaven","Hierophant Green","Sticky Fingers","Magicians Red","Gold Experience","Whitesnake","C-Moon","King Crimson","Silver Chariot","The World Over Heaven","The Hand","Star Platinum","Cream","Crazy Diamond","Killer Queen"],"specs":["Basic","Hamon","Vampire","Joseph\'s Hamon","Witch","Spin"],"horses":["Basic","Blitz","Vital","Bullet","Precise","Difficult","Simple"]}');
-
-/***/ }),
-
-/***/ 120:
-/***/ ((module) => {
-
-module.exports = JSON.parse('{"stands":["C-Moon"],"specs":[],"horses":[]}');
+module.exports = JSON.parse('{"name":"Regular","source":"built-in","stands":["The World","Star Platinum - Prime","Made In Heaven","Hierophant Green","Sticky Fingers","Magicians Red","Gold Experience","Whitesnake","C-Moon","King Crimson","Silver Chariot","The World Over Heaven","The Hand","Star Platinum","Cream","Crazy Diamond","Killer Queen"],"specs":["Basic","Hamon","Vampire","Joseph\'s Hamon","Witch","Spin"],"horses":["Basic","Blitz","Vital","Bullet","Precise","Difficult","Simple"]}');
 
 /***/ }),
 
