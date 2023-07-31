@@ -1,6 +1,6 @@
 /**
 * 
-* @source: https://raw.githubusercontent.com/superbike123/superbike123.github.io/main/desert-randomiser/src/index.ts
+* @source: https://raw.githubusercontent.com/superbike123/superbike123.github.io/main/desert-generator/index.ts
 * 
 * @licstart  The following is the entire license notice for the JavaScript code in this page.
 * 
@@ -33,33 +33,26 @@
 
 ////////////////////////////////////////////////////////////
 //              desert & sbr test Randomiser              //
+//                      Version 2.0                       //
 ////////////////////////////////////////////////////////////
-
-const version: number = 2.1
 
 
 // Sets are now imported as JSON files. See the sets/ directory.
-const regular = require('../sets/default.json');
-const alternative = require('../sets/alternative.json');
-// const james = require('../sets/james.json'); // lol
+const regular = require('./sets/default.json');
+const alternative = require('./sets/alternative.json');
+const james = require('./sets/james.json'); // lol
 
-// File for getting the correct emojis to place next to the selection
 const status = require('./status.json');
 
 // Define the sets that come by default, this is used for the dropdown HTML object.
-const defaultSets: string = "<option>" + regular["name"] + "</option><option>" + alternative["name"] + "</option>" // james["name"]+ "</option>";
+const defaultSets: string = "<option>Regular</option><option>Alternative</option>";
 const dropdown: any = document.getElementById("setsDropdown")!;
 
 // Add the default sets to the dropdown.
 dropdown.innerHTML = defaultSets;
 
-// Find the disallow duplicates checkbox and set it to true
-/* const dupeCheckbox: any = document.getElementById("dupeCheckbox")!;
-dupeCheckbox.checked = true; */
-
-
 // Store symbols for the identifications.
-const symbols: string[] = [ "✅", "🌳" ]
+const symbols: string[] = [ "✅", "🌳"]
 
 
 console.log("---- Source code for this website can be found on the git repository here: https://github.com/superbike123/superbike123.github.io/tree/main/desert-randomiser");
@@ -71,7 +64,9 @@ if (gameButton !== null) {
     if (document.cookie === "") {
         console.log("-- No cookie found... trying to create one")
         document.cookie = "selectedGame=desert";
+        console.log("-- Created a cookie with value: " + document.cookie)
         document.getElementById("gameButton")!.innerHTML = "<strong>" + "Current Game: desert" + "</strong>";
+        console.log("-- Set the text on gameButton as: '" + document.getElementById("gameButton")!.textContent + "'")
         document.getElementById("horse")!.style.display = "none";
     } else {
         console.log("-- Found a cookie with value: " + document.cookie);
@@ -89,9 +84,6 @@ if (gameButton !== null) {
 export let getStand = (type: number) => { 
     if (type === 0) { clearText(); }
 
-    /* if (dupeCheckbox.checked) {
-
-    } */
     if (dropdown.value === "Alternative") {
         let standNo: number = Math.floor(Math.random() * alternative.stands.length);
         let generatedStand: string = alternative.stands[standNo];
@@ -105,6 +97,7 @@ export let getStand = (type: number) => {
         } else {
             // Display the Stand
             document.getElementById("standField")!.textContent = "Stand: " + generatedStand;
+            return generatedStand;
         }
     } else { // Regular set
         let standNo: number = Math.floor(Math.random() * regular.stands.length);
@@ -119,6 +112,7 @@ export let getStand = (type: number) => {
         } else {
             // Display the Stand
             document.getElementById("standField")!.textContent = "Stand: " + generatedStand;
+            return generatedStand;
         }
         
     }
@@ -141,6 +135,7 @@ export let getSpec = (type: number) => {
         } else {
             // Display the Stand
             document.getElementById("specField")!.textContent = "Spec: " + generatedSpec;
+            return generatedSpec;
         }
     } else {
         let specNo: number = Math.floor(Math.random() * regular.specs.length);
@@ -155,6 +150,7 @@ export let getSpec = (type: number) => {
         } else {
             // Display the Stand
             document.getElementById("specField")!.textContent = "Spec: " + generatedSpec;
+            return generatedSpec;
         }
     }
 }
@@ -168,12 +164,14 @@ export let getHorse = (type: number) => {
 
         // Display the Spec
         document.getElementById("horseField")!.textContent = "Horse: " + generatedHorse;
+        return generatedHorse;
     } else {
         let horseNo: number = Math.floor(Math.random() * regular.horses.length);
         let generatedHorse: string = regular.horses[horseNo];
 
         // Display the Spec
         document.getElementById("horseField")!.textContent = "Horse: " + generatedHorse;
+        return generatedHorse;
     }
 }
 
@@ -219,9 +217,9 @@ export let moreLess = () => {
     const line0: string = '<strong>desert & sbr test Randomiser</strong> is a tool used to create randomised selections of Stands, Specs and Horses for <a href="https://www.roblox.com/games/8823151085/desert">desert</a> and <a href="https://www.roblox.com/games/9245024720/sbr-test">sbr test</a>...';
     const line0_alt: string = '<strong>desert & sbr test Randomiser</strong> is a tool used to create randomised selections of Stands, Specs and Horses for <a href="https://www.roblox.com/games/8823151085/desert">desert</a> and <a href="https://www.roblox.com/games/9245024720/sbr-test">sbr test</a>';
     const line1: string = "Use the <strong>'Select All'</strong> button to generate all of them.";
-    const line2: string = 'Using the <strong>alternative set</strong> disables some stands, specs and horses. For more information, <a href="https://github.com/superbike123/superbike123.github.io/blob/main/desert-randomiser/docs/AltSet.md">see the list of changes';
+    const line2: string = 'Using the <strong>alternative set</strong> disables some stands, specs and horses. For more information, <a href="https://github.com/superbike123/superbike123.github.io/blob/main/desert-randomiser/AltSet.md">see the list of changes';
     const line3: string = "If something has a tick (✅) next to it, then it is complete. If something has a tree (🌳) then it has a skilltree.";
-    const line4: string = "superbike123.github.io: Version " + version;
+    const line4: string = "desert & sbr test Randomiser: Version 2.0";
 
     const moreLessText: HTMLElement = document.getElementById("moreLessText")!;
     const line0Html: HTMLElement = document.getElementById("text_0")!;

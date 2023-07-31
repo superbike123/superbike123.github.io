@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<meta http-equiv="expires" content="0">
+<meta content="desert & sbr test Randomiser" property="og:title" />
+<meta content="A tool to generate random stuff for desert & sbr test" property="og:description" />
+
+<!-- desert & sbr test Randomiser -->
+
+<html>
+    <title>desert & sbr test Randomiser</title>
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="../src/index.css">
+    <link rel="stylesheet" href="../src/darkmode.css">
+
+    <body>
+	<center><strong><h1>desert & sbr test Randomiser</h1></strong></center>
+	<center><img src="../src/images/favicon.ico" alt="Menacing" width= height= ></img></center>
+        <strong><i><a href="https://github.com/superbike123/superbike123.github.io/tree/main/desert-randomiser">Source code</a></i></strong>
+        <i><p id="text_0"><strong>desert & sbr test Randomiser</strong> is a tool used to create randomised selections of Stands, Specs and Horses for <a href="https://www.roblox.com/games/8823151085/desert">desert</a> and <a href="https://www.roblox.com/games/9245024720/sbr-test">sbr test</a>...</p></i>
+	<i><p id="text_1"></p></i>
+	<i><p id="text_2"></p></i>
+	<i><p id="text_3"></p></i>
+	<i><p id="text_4" style="font-size:10px"></p></i>
+	<a href=# onclick="desertRandomiser.moreLess()" id="moreLessText">Show More</a>
+	<br>
+        <strong><p>Options:</p></strong>
+	<button onclick="desertRandomiser.switchGame()" id="gameButton"><strong></strong></button>
+        <button onclick="desertRandomiser.clearText()">Clear</button>
+	<!-- <input type="checkbox" id="altSetCheckbox" name="checkbox"> <label for="checkbox">Use alternative set</label> -->
+	<label>Use set:</label>
+	<select id="setsDropdown"></select>
+	<br> <br>
+        <button id="stand" onclick="desertRandomiser.getStand(0)">Select a Stand</button>
+        <button id="spec" onclick="desertRandomiser.getSpec(0)">Select a Spec</button>
+        <button id="horse" onclick="desertRandomiser.getHorse(0)">Select a Horse</button>
+        <button id="all" onclick="desertRandomiser.getBoth()">Select All</button>
+        <div id="fields">
+            <h3 id="standField"></h3>
+            <h3 id="specField"></h3>
+            <h3 id="horseField"></h3>
+        </div>
+    </body>
+</html>
+
+<script src="../dist/bundle.js"></script>
