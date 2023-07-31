@@ -1,96 +1,9 @@
 h1 {
-	font-size: 28px;
+	font-size: 38px;
 	color: purple;
-	font-family: "MV Boli";
 }
 
-.button {
-	background-color: grey;
-	/* Green */
-	border: none;
-	color: white;
-	padding: 10px 14px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-}
-
-.button:hover {
-	background-color: white;
-	/* Green */
-	border: none;
-	color: black;
-	padding: 10px 14px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-}
-
-.selectall {
-	background-color: rgb(51, 51, 51);
-	/* Green */
-	border: none;
-	color: white;
-	padding: 10px 14px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-}
-
-.selectall:hover {
-	background-color: white;
-	/* Green */
-	border: none;
-	color: black;
-	padding: 10px 14px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-}
-
-.currentgame {
-	background-color: purple;
-	/* Green */
-	border: none;
-	color: white;
-	padding: 5px 15px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-}
-
-.currentgame:hover {
-	background-color: rgb(153, 0, 153);
-	/* Green */
-	border: none;
-	color: white;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-}
-
-.topbutton {
-	background-color: grey;
-	/* Green */
-	border: none;
-	color: white;
-	padding: 5px 15px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-}
-
-.topbutton:hover {
-	background-color: white;
-	/* Green */
-	border: none;
-	color: black;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-}
 
 body {
 	font-family: 'Tahoma';
-
 }
